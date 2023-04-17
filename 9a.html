@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Exercise</title>
+</head>
+<body>
+    <button>9a</button>
+    <button class="button2" style="margin-bottom: 50px;">9b</button>
+    <br>
+    <button class="heads-and-tails" onclick="
+        playerChoose = 'heads';
+        buttonTextDisplay();
+    ">heads</button>
+    <button class="heads-and-tails" onclick="
+        playerChoose = 'tails';
+        buttonTextDisplay();
+    ">tails</button>
+    <p class="js-button-text" style="margin-bottom: 50px;"></p>
+    <br>
+    <input placeholder="Name" class="js-user-name-input" onkeydown="pressEnter(event)">
+    <button onclick="
+        nameDisplay();
+    ">Submit</button>
+    <p class="js-name-display"></p>
+    
+    <!--
+        9e Psuedocode
+    1. Player click the button
+    2. Computer record player's choice
+    3. Computer display player's move below
+    DONE!
+    -->
+
+    <!--
+        9d Psuedocode
+    1. Get the input info and record it
+    2. When 'Submit' button is clicked
+    3. Display it below
+    -->
+
+    
+
+    <script>
+        let playerChoose = '';
+        
+        function buttonTextDisplay() {
+            document.querySelector('.js-button-text').innerHTML = `You choose: ${playerChoose}`;
+        }
+
+        function nameDisplay() {
+            let userName = document.querySelector('.js-user-name-input').value;
+
+            document.querySelector('.js-name-display').innerHTML = `Your name is: ${userName}`
+
+        }
+
+        function pressEnter(event) {
+            if (event.key === 'Enter') {
+                nameDisplay();
+            }
+        }
+
+        
+        
+    
+
+    </script>
+</body>
+</html>

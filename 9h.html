@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="type something" type="text" class="input-box" onkeyup="displayText()">
+    <p class="js-text-display"></p>
+
+    <!--
+        Psuedocode steps
+    1.Users input text into the box
+    2.Computer records the value
+    3.Display it on the 'p' element
+    -->
+
+    <script>
+        function displayText() {
+            let inputValue = document.querySelector('.input-box').value;
+
+            document.querySelector('.js-text-display').innerHTML =  inputValue;
+        }
+    </script>
+</body>
+</html>

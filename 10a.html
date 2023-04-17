@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10</title>
+    <style>
+        .is-toggled {
+            background-color: black;
+            color: white;
+        }
+
+        .the-button1, .the-button2, .the-button3  {
+            padding: 10px 18px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button style="margin-bottom: 20px;" class="lights" onclick="
+        lightOff();
+    ">Lights Off</button>
+<br>
+    <button class="the-button1" onclick="
+        toggleButton('.the-button1');
+    ">Gaming</button>
+    <button class="the-button2" onclick="
+        toggleButton('.the-button2');
+    ">Music</button>
+    <button class="the-button3" onclick="
+        toggleButton('.the-button3');
+    ">Tech</button>
+
+
+    <script>
+        let webBackground = document.body.style.backgroundColor = "White";
+
+        function toggleButton(selector) {
+            let button = document.querySelector(selector);
+            if (!button.classList.contains('is-toggled')) {
+                turnOffPreviousButton();
+                button.classList.add('is-toggled');
+            } else {
+                button.classList.remove('is-toggled');
+            }
+        }
+
+        function turnOffPreviousButton() {
+            const previousButton = document.querySelector('.is-toggled');
+            if (previousButton) {
+                previousButton.classList.remove('is-toggled');
+            }
+        }
+
+        function lightOff() {
+            if (webBackground === "White") {
+                webBackground = document.body.style.backgroundColor = "Black";
+                document.querySelector('.lights').innerHTML = 'Lights On';
+            } else if (webBackground === "Black") {
+                webBackground = document.body.style.backgroundColor = "White";
+                document.querySelector('.lights').innerHTML = 'Lights Off';
+            }
+                
+            }
+    
+
+    </script>
+</body>
+</html>

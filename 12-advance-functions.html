@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-button"
+        onclick="
+        
+        ">Click</button>
+
+
+    <script>
+        const buttonElement = document.querySelector('.js-button');
+        const eventListener = () => {
+            console.log('Click');
+        }
+        buttonElement.addEventListener('click',eventListener);
+
+        buttonElement.removeEventListener('click', eventListener);
+
+        buttonElement.addEventListener('click',eventListener);
+
+        /*
+        const arrowFunction = () => {
+            console.log('hello');
+        };
+
+        arrowFunction();
+
+        const oneParam = (param) => {
+            console.log(param + 1);
+        };
+        oneParam(2);
+
+        const oneLine = () => 2 + 3;
+        console.log(oneLine());
+
+        const object2 = {
+            method: () => {
+                
+            },
+            method() {
+
+            }
+        }
+        */
+    </script>
+    
+</body>
+</html>

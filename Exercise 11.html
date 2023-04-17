@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 11a, 11b
+        // let myArray = [10, 20, 30];
+        // myArray[2] = 99;
+
+        // let secondArray = ['hello','Hi','Yo','Sup'];
+
+        // function getLastValue(array) {
+        //     let lastArray = array.slice(-1);
+        //     console.log(lastArray);
+        // }
+
+        // 11c
+        // function arraySwap(array) {
+        //     const lastIndex = array.length -1;
+        //     const lastValue = array[lastIndex];
+        //     const firstValue = array[0]
+
+        //     array[0] = lastValue;
+        //     array[lastIndex] = firstValue;
+            
+        //     return array;
+        // }
+
+        // 11d
+        // for (let i = 0; i <= 10; i += 2) {
+        //     console.log(i)
+        // }
+
+        // 11e
+        // for (i = 5; i >= 0; i = i - 1) {
+        //     console.log(i);
+        // }
+
+        // 11 f
+        // let i = 0
+        // while ( i <= 10 ) {
+        //     console.log(i);
+        //     i += 2;
+        // }
+
+        // let i = 5
+        // while ( i >= 0 ) {
+        //     console.log(i);
+        //     i -= 1;
+        // }
+
+        // 11g
+        //let testArray = [7, 3, 1, 5, 3, 2, 1, 7];
+        // let newArray = [];
+
+        // for (let i = 0; i < testArray.length; i++) {
+        //     newArray.push(testArray[i] + 1);
+        // }
+        
+        // console.log(newArray);
+
+        // 11h
+        // addOne(testArray);
+        // function addOne(array) {
+        //     let oriArray = array
+        //     let addedArray = [];
+
+        //     for (let i = 0; i < array.length; i++) {
+        //         addedArray.push(oriArray[i] + 1);
+        //     }
+
+        //     console.log(addedArray);
+        // }
+
+            // Psuedocode
+            // 1. Take fisrt value from array1 plus with first value from array2
+            // 2. Repeat till every value got added
+            // 3. Put it in the result array
+
+        // 11j
+        // let arrayOne = [1, 2, 3];
+        // let arrayTwo = [4, 5, 6];
+
+        // function addedArrays(array1, array2) {
+        //     let result = [];
+
+        //     for (let i = 0; i < array1.length; i++) {
+        //         let firstArray = array1;
+        //         let secondArray = array2;
+        //         result.push(firstArray[i]+secondArray[i]);
+        //     }
+        //     console.log(result);
+        // }
+
+        // addedArrays(arrayOne, arrayTwo);
+
+        // 11k
+            // Psuedocode
+            // 1.Create a box to store value for counting positive number
+            // 2.Go through an array, everytime that we found a positive number, +1 in the box above
+
+        // let testArray = [-2, 3, -5, 7, 10];
+
+        // function countPositive(nums) {
+        //     let totalPositive = 0;
+
+        //     // console.log(nums[2]);
+
+        //     for (let i = 0; i <= nums.length; i++) {
+        //         if (nums[i] > 0) {
+        //             totalPositive = totalPositive + 1;
+        //         } 
+        //     }
+        //     console.log(totalPositive);
+        // }
+
+        // countPositive(testArray);
+
+        /* 11l
+            Psuedocode - Wrong (x)
+            1.Get the value of an array
+            2.Sort it with sort function
+            3.Log it with first and last value
+
+            Psuedocode2 
+            1.Create an object that hold the value for min / max
+            2.Set default value for min / max
+            3.Define every number in the array
+            4.Check if any number is less than
+
+        */
+        //let testArray = [-2, 3, -5, 7, 10];
+
+        // console.log(testArray.sort());
+
+        // function minMax(nums) {
+        //     let result = {
+        //         min: 0,
+        //         max: 0 
+        //     };
+
+        //     for (let i = 0; i < nums.length; i++) {
+        //         const value = nums[i];
+
+        //         if (value < result.min) {
+        //             result.min = value;
+        //         }
+                
+        //         if (value > result.max) {
+        //             result.max = value;
+        //         }
+        //     }
+        //     return result;
+        // }
+
+        // console.log(minMax(testArray));
+
+        // 11m
+        // function minMax(nums) {
+        //     let result = null;
+            
+        //     if (nums && nums.length > 0) {
+        //         result = {
+        //             min: nums[0],
+        //             max: nums[0]
+        //         }
+        //     };
+
+        //     for (let i = 0; i < nums.length; i++) {
+        //         const value = nums[i];
+
+        //         if (value < result.min) {
+        //             result.min = value;
+        //         }
+                
+        //         if (value > result.max) {
+        //             result.max = value;
+        //         }
+        //     }
+        //     return result;
+        // }
+        // console.log(minMax(3));
+        // console.log(minMax([]));
+
+        // let result1 = {};
+        // result1['add-on'];
+        // console.log(result1);
+
+        // 11n
+        // let testObject = {};
+        // testObject['Hello'] = 1;
+
+        // console.log(testObject);
+
+        // function countWords(words) {
+        //     let result = {};
+
+        //     for (let i = 0; i < words.length; i++) {
+        //         const word = words[i];
+
+        //         if (!result[word]) {
+        //             result[word] = 1;
+        //         } else {
+        //             result[word]++;
+        //         }
+        //     }
+        //     return result;
+        // }
+        // console.log(countWords['one','one','two','one']);
+
+        // 11o & 11p
+        // let testArray = ['hello','world','search','good','search'];
+        // let index = -1
+
+        // for (let i = 0; i < testArray.length; i++) {
+        //     let word = testArray[i];
+        //     if (word === 'search') {
+        //         index = i;
+        //         break;
+        //     } 
+        // }   
+
+        // console.log(index);
+
+        // 11q
+        // function findIndex(array, word) {
+        //     let input = array;
+        //     let find = word;
+        //     let index = -1;
+
+        //     for (let i = 0; i < input.length; i++) {
+        //         if (input[i] === word) {
+        //             index = i;
+        //             break;
+        //         }
+        //     }
+        //     console.log(index);
+        // }
+
+        // findIndex(['green','red','blue','red'],'yellow')
+
+        // 11r
+        // function removeEgg(foods) {
+        //     let newArray = [];
+        //     let oriArray = foods;
+
+        //     for (let i = 0; i < oriArray.length; i++) {
+        //         if (foods[i] != 'egg') {
+        //         newArray.push(foods[i]);
+        //     } else {
+        //         continue;
+        //     }
+        //     }
+        //     console.log(newArray);
+        // }
+
+        // removeEgg(['egg','apple','egg','egg','ham'])
+
+        /* 11s
+        Psuedocode (remove the first 2 eggs from the array)
+        1.Loop through the array to check for 'egg'
+        2.Create the counter that counts the number of removed egg
+        3.If the counter is < 2 continue as about but if > 2 break the loop
+        */
+        // function removeEgg(foods) {
+        //     let newArray = [];
+        //     let eggCounter = 0;
+
+        //     for (let i = 0; i < foods.length; i++) {
+        //         if (eggCounter < 2) {
+        //             if (foods[i] != 'egg') {
+        //                 newArray.push(foods[i]);
+        //             } else if (foods[i] === 'egg') {
+        //                 eggCounter += 1;
+        //                 continue;
+        //             }
+        //         } else {
+        //             newArray.push(foods[i]);
+        //         }
+        //     }
+        //     console.log(eggCounter);
+        //     console.log(newArray);
+        // }
+        // removeEgg(['egg','apple','egg','egg','ham'])
+
+        //11t - remove last 2 eggs from the array
+        /* Psuedocode
+        1.Make everything work the same, but instead start from the last word
+        */
+        // function removeEgg(foods) {
+        //     let newArray = [];
+        //     let reverseFoods = foods.reverse();
+        //     let eggCounter = 0;
+
+        //     for (let i = 0; i < reverseFoods.length; i++) {
+        //         if (eggCounter < 2) {
+        //             if (reverseFoods[i] != 'egg') {
+        //                 newArray.push(reverseFoods[i]);
+        //             } else if (reverseFoods[i] === 'egg') {
+        //                 eggCounter += 1;
+        //                 continue;
+        //             }
+        //         } else {
+        //             newArray.push(reverseFoods[i]);
+        //         }
+        //     }
+        //     console.log(eggCounter);
+        //     console.log(newArray.reverse());
+        // }
+        // removeEgg(['egg','apple','egg','egg','ham'])
+
+        //11u
+        // const foods = ['egg','apple','egg','egg','ham']
+
+        // function removeEgg(foods) {
+        //     let newArray = [];
+        //     let reverseFoods = foods.slice().reverse();
+        //     let eggCounter = 0;
+
+        //     for (let i = 0; i < reverseFoods.length; i++) {
+        //         if (eggCounter < 2) {
+        //             if (reverseFoods[i] != 'egg') {
+        //                 newArray.push(reverseFoods[i]);
+        //             } else if (reverseFoods[i] === 'egg') {
+        //                 eggCounter += 1;
+        //                 continue;
+        //             }
+        //         } else {
+        //             newArray.push(reverseFoods[i]);
+        //         }
+        //     }
+        //     return newArray.reverse();
+        // }
+        // console.log(removeEgg(foods));
+        // console.log(foods);
+
+        // 11v
+        // function fizzBuzz() {
+        //     for(let i = 0;i <= 20; i++) {
+        //         if (i === 0) {
+        //             console.log(i);
+        //         } else if (i % 3 === 0 && i % 5 === 0) {
+        //             console.log('FizzBuzz');
+        //         } else if (i % 5 === 0) {
+        //             console.log('Buzz');
+        //         } else if (i % 3 === 0) {
+        //             console.log('Fizz')
+        //         } else {
+        //             console.log(i);
+        //         }
+        //     }   
+        // }
+        
+        // fizzBuzz()
+        /*
+        11w - Make each word appear once
+        PsuedoCode
+        1.Take the input array and create a loop where it selects the word and put it in the new array.
+        2.Check if the word is already in the new array (using find index), if yes, skip that word.
+        3.Return and log the new array
+
+        */
+        function findIndex(array, word) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === word) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        let sampleArray = ['green','red','green','red'];
+
+        function unique(array) {
+            let result = [];
+        
+            for (let i = 0; i < array.length; i++) {
+                let word = array[i];
+
+                if (findIndex(result, word) === -1) {
+                   result.push(word);
+                } 
+            }
+            return result;
+        }
+
+        console.log(unique(sampleArray));
+
+
+    </script>
+</body>
+</html>

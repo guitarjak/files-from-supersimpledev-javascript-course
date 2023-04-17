@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button 
+        class="js-start-button" 
+        onclick="changeToFinish();"
+    >Start</button>
+<p>Just a break</p>
+    <button 
+        class="js-loading-button" 
+        onclick="loadAndFinish();"
+    >Start</button>
+<p>Another break</p>
+    <button 
+        class="js-addtocart"
+        onclick="addItem();"
+    >Add to cart</button>
+    <p class="add-text-display"></p>
+    <button 
+        class="js-addtocart"
+        onclick="addItem2();"
+    >Add to cart</button>
+    <p class="add-text-display2"></p>
+
+    <p>Messages Exercise (12f)</p>
+    <button onclick="
+        addMessage();
+    ">Add</button>
+    <button onclick="
+        removeMessage();
+    ">Remove</button>
+
+    <script>
+    // 12a
+    // let add = function() {
+    //  console.log(2 + 3);
+    // }
+
+    //    add();
+    //    add();
+
+    // 12b
+    // function runTwice(fun) {
+    //     fun();
+    //     fun();
+    // }
+
+    // runTwice(function() {
+    //     console.log('12b');
+    // });
+
+    //12c
+
+    function changeToFinish() {
+        let insideText = document.querySelector('.js-start-button')
+
+        if (insideText.innerHTML === 'Start') {
+            setTimeout(function() {
+                insideText.innerHTML = 'Finish';
+            }, 1000);
+        } else if (insideText.innerHTML === 'Finish') {
+            setTimeout(function() {
+                insideText.innerHTML = 'Start';
+            }, 1000);
+        }
+    }
+
+    //12d
+    /* Psuedocode
+    1.Click 
+    2.Change to "loading..." 
+    3.delayed 1 sec and change to finish  */
+    function loadAndFinish() {
+        let loadingInsideText = document.querySelector('.js-loading-button')
+
+        if (loadingInsideText.innerHTML === 'Start') {
+            loadingInsideText.innerHTML = 'Loading...';
+            setTimeout(function() {
+                loadingInsideText.innerHTML = 'Finish';
+            }, 1000);
+        } else {
+            loadingInsideText.innerHTML = 'Loading...';
+            setTimeout(function() {
+                loadingInsideText.innerHTML = 'Start';
+            }, 1000);
+        }
+    }
+
+    //12e
+    function addItem() {
+        let addedTextDisplay = document.querySelector('.add-text-display') 
+
+        addedTextDisplay.innerHTML = 'Item added!';
+        
+        setTimeout(function() {
+            addedTextDisplay.innerHTML = '';
+        }, 1500);
+    }
+    
+    //12f
+    let timeoutID;
+
+    function addItem2() {
+        let addedTextDisplay = document.querySelector('.add-text-display2') 
+
+        addedTextDisplay.innerHTML = 'Item added!';
+
+        clearTimeout(timeoutID); // use this to clear the previous timeout
+
+        timeoutID = setTimeout(function() { // mark the ID that we want to clear this one
+            addedTextDisplay.innerHTML = '';
+        }, 1500);
+    }
+
+    //12g
+    // function titleChanger() {
+    //     let title = document.title;
+    //     if (title === 'Document') {
+    //         document.title = "(2) New messages"
+    //     } else {
+    //         document.title = "Document"
+    //     }
+    // }
+
+    // setInterval(titleChanger, 1000);
+
+    //12f
+    // let messages = 2;
+
+    // function addMessage() {
+    //     messages += 1;
+    //     console.log(messages);
+    // }
+
+    // function removeMessage() {
+    //     messages -= 1;
+    //     console.log(messages);
+    // }
+
+    // function titleChanger() {
+    //     let title = document.title;
+    //     if (title === 'Document') {
+    //         document.title = `(${messages}) New messages`
+    //     } else {
+    //         document.title = "Document"
+    //     }
+    // }
+
+    // setInterval(titleChanger, 1000);
+
+    /*12i Psuedocode
+    1. All the steps same as 12h
+    2. Check if message < 0
+    3. If message is less than 0, set the value to make message = 0 
+    4. Stop the title changing function
+    */
+    
+    let messages = 2;
+
+    function addMessage() {
+        messages += 1;
+        console.log(messages);
+    }
+
+    function removeMessage() {
+        messages -= 1;
+        if (messages < 0) {
+            messages = 0;
+        }
+        console.log(messages);
+    }
+
+    function titleChanger() {
+        let title = document.title;
+
+        if (messages <= 0) {
+            document.title = 'Document';
+        } else if (messages > 0) {
+            if (title === 'Document') {
+            document.title = `(${messages}) New messages`
+            } else {
+            document.title = "Document";
+            }
+        }
+    }
+
+    setInterval(titleChanger, 1000);
+
+    //12j
+    const multiply = (value1, value2) => {
+        let totalValue = value1 * value2;
+        return totalValue;
+    };
+
+    // console.log(multiply(7, 10));
+
+    //12k
+    const multiply2 = (value1, value2) => value1 * value2;
+
+    // console.log(multiply2(5, 20));
+
+    //12l
+    function countPositive(nums) {
+        let positiveValue = 0;
+
+        nums.forEach((num) => {
+            if (num > 0) {
+            positiveValue++;
+            }
+        });
+            return positiveValue;
+    } 
+        
+    //console.log(countPositive([-2, 3, -5, 7, 10]));
+
+    //12m
+    function addNum(array, num) {
+        let result = array.map((value, index) => {
+            return value + num;
+            });
+        return result;
+    }
+
+//console.log(addNum([1, 2, 3], 5));
+
+    /*12n Psuedocode
+    What is filter()? - Screenout the thing we don't want with boolean
+    */
+    // let testArray = ['egg','apple','egg','egg','ham'];
+
+    // function removeEgg(array) {
+    //     let removed = array.filter(value => value !== 'egg' )
+    //     return removed;
+    // }; 
+
+    //console.log(removeEgg(['egg','apple','egg','egg','ham']));
+
+    //12o - remove only the first 2 'egg'
+    let testArray = ['egg','apple','egg','egg','ham'];
+
+    function removeEgg(array) {
+        let eggRemoved = 0;
+        return array.filter(value => {
+            if (value === 'egg' && eggRemoved < 2) {
+                eggRemoved += 1;
+                return false;
+            } 
+            return true;
+        });
+    }
+
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+    
+    
+
+    </script>
+</body>
+</html>

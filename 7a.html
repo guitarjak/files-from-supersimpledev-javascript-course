@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7a</title>
+</head>
+<body>
+    
+
+    <script>
+        /* Ex 7a 7b 7c
+        let name = '';
+        
+        function greet(name) {
+            if (!name) {
+                console.log('Hi Cutie!');
+            } else {
+                console.log(`Hello ${name}`);
+            }
+        }
+        */
+
+        let cToF = '';
+        let fToC = '';
+
+        function convertToFahrenheit(celcius) {
+            let cToF = (celcius * 9 / 5) + 32;
+            return cToF;
+        }
+
+        function convertToCelcius(fahrenheit) {
+            let fToC = (fahrenheit - 32) * 5 / 9;
+            return fToC;
+        }
+
+        function convertTemp(degrees, unit) {
+
+            if (unit === 'C' || unit === 'c') {
+                let converter = convertToFahrenheit(degrees) + `F`
+                console.log(converter)
+            } else {
+                let converter = convertToCelcius(degrees) + `C`
+                console.log(converter)
+            }
+            
+        }
+
+
+        convertTemp(86, 'f')
+    </script> 
+</body>
+</html>
